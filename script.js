@@ -1,6 +1,6 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
-let box = 28;
+let box = 32;
 let snake = [];
 snake[0] = {
     x: 6 * box,

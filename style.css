@@ -1,3 +1,9 @@
 body{
-    
+    height: 95vh;
+    width: 95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(13, 15, 13, 0.658);
 }
