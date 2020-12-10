@@ -5,7 +5,8 @@ let snake = [];
 snake[0] = {
     x: 6 * box,
     y: 6 * box
-}
+}   
+let direction = "right";
 
 function criarBG() {
     context.fillStyle = "black";
@@ -19,5 +20,27 @@ function criarCobrinha() {
     }
 }
 
-criarBG();
-criarCobrinha();
+function iniciarJogo(){
+    criarBG();
+    criarCobrinha();
+
+    let snakex = snake[0].x;
+    let snakey = snake[0].y;
+
+    if(direction == "right") snakex += box;
+    if(direction == "left") snakex -= box;
+    if(direction == "up") snakey -= box;
+    if(direction == "down") snakey += box;
+
+    snake.pop();
+
+    let newhead = {
+        x: snakex,
+        y: snakey
+    }
+
+    snake.unshift(newhead);
+
+}
+
+let jogo = setInterval(iniciarJogo, 100);
